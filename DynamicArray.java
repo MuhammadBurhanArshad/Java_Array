@@ -98,5 +98,26 @@ class DynamicArray {
         }
     }
     
+    public int maxSumOfTwo(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            System.out.println("Array must have at least two elements.");
+        }
+
+        int max1 = arr[0];
+        int max2 = arr[1];
+
+        for (int i = 2; i < arr.length; i++) {
+            int current = arr[i];
+            
+            if (current > max1) {
+                max2 = max1;
+                max1 = current;
+            } else if (current > max2) {
+                max2 = current;
+            }
+        }
+
+        return max1 + max2;
+    }
     
 }

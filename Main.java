@@ -17,5 +17,9 @@ public class Main {
         float medianArray = dynamicArray.getMedian(myRegID);
 
         System.out.println("Median is: " + medianArray);
+
+        int maxSumOfTwo = dynamicArray.maxSumOfTwo(myRegID);
+
+        System.out.println("Max sum of two elements is: " + maxSumOfTwo);
     }
 }
