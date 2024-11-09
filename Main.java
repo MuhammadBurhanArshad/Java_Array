@@ -10,5 +10,12 @@ public class Main {
 
         System.out.println("Distinct Array is: " + dynamicArray.arrayToString(distinctArray));
 
+        int[] duplicatesArray = dynamicArray.getDuplicates(myRegID);
+
+        System.out.println("Duplicate Array is: " + dynamicArray.arrayToString(duplicatesArray));
+
+        int[] medianArray = dynamicArray.getDuplicates(myRegID);
+
+        System.out.println("Duplicate Array is: " + dynamicArray.arrayToString(medianArray));
     }
 }
