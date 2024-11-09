@@ -6,5 +6,9 @@ public class Main {
 
         System.out.println("Our Original Array is: " + dynamicArray.arrayToString(myRegID));
         
+        int[] distinctArray = dynamicArray.getDistinct(myRegID);
+
+        System.out.println("Distinct Array is: " + dynamicArray.arrayToString(distinctArray));
+
     }
 }
