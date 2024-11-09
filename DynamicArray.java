@@ -12,6 +12,19 @@ class DynamicArray {
         return result;
     }
 
+    public int[] bubbleSort(int[] array) {
+            for (int i = 0; i < array.length - 1; i++) {
+                for (int j = 0; j < array.length - i - 1; j++) {
+                    if (array[j] > array[j + 1]) {
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+            return array;
+        }    
+
     public int[] getDistinct(int[] array) {
         int[] distinctArray = new int[array.length];
         int totalDistincts = 0;
@@ -75,4 +88,15 @@ class DynamicArray {
 
         return result;
     }
+    public float getMedian(int[] array) {
+        int[] sortedArray = this.bubbleSort(array);
+    
+        if (sortedArray.length % 2 == 0) {
+            return (sortedArray[sortedArray.length / 2 - 1] + sortedArray[sortedArray.length / 2]) / 2.0f;
+        } else {
+            return sortedArray[sortedArray.length / 2];
+        }
+    }
+    
+    
 }

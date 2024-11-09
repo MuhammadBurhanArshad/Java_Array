@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int[] myRegID = {2, 3, 1, 2, 3, 9, 5,2,3};
+        int[] myRegID = {2, 3, 1, 2, 3, 9, 5};
         
         DynamicArray dynamicArray = new DynamicArray();
 
@@ -14,8 +14,8 @@ public class Main {
 
         System.out.println("Duplicate Array is: " + dynamicArray.arrayToString(duplicatesArray));
 
-        int[] medianArray = dynamicArray.getDuplicates(myRegID);
+        float medianArray = dynamicArray.getMedian(myRegID);
 
-        System.out.println("Duplicate Array is: " + dynamicArray.arrayToString(medianArray));
+        System.out.println("Median is: " + medianArray);
     }
 }
