@@ -39,5 +39,9 @@ public class Main {
         
         System.out.println("The array mode is:  " + arrayMode);
        
+        int arrayMean = dynamicArray.arrayMean(myRegID);
+        
+        System.out.println("The array mean is:  " + arrayMean);
+       
     }
 }

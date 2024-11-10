@@ -175,4 +175,14 @@ class DynamicArray {
 
         return mode;
     }
+
+    public int arrayMean(int[] array) {
+        int arraySum = 0;
+        
+        for (int num : array) {
+            arraySum += num;
+        }
+
+        return arraySum / array.length;
+    }
 }
