@@ -15,7 +15,7 @@ public class Main {
         
         System.out.println("Duplicate Array is: " + dynamicArray.arrayToString(duplicatesArray));
         
-        float medianArray = dynamicArray.getMedian(myRegID);
+        float medianArray = dynamicArray.arrayMedian(myRegID);
         
         System.out.println("Median is: " + medianArray);
 
@@ -34,6 +34,10 @@ public class Main {
         String isPalindrome = dynamicArray.isPalindrome(myRegID) ? "Palindrome" : "Not Palindrome";
         
         System.out.println("The array is " + isPalindrome + ".");
+
+        int arrayMode = dynamicArray.arrayMode(myRegID);
+        
+        System.out.println("The array mode is:  " + arrayMode);
        
     }
 }

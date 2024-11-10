@@ -88,7 +88,7 @@ class DynamicArray {
 
         return result;
     }
-    public float getMedian(int[] array) {
+    public float arrayMedian(int[] array) {
         int[] paramArray = array;
         int[] sortedArray = this.bubbleSort(paramArray);
         
@@ -154,4 +154,25 @@ class DynamicArray {
         return true;
     }
     
+    public int arrayMode(int[] array) {
+        int mode = array[0];
+        int maxCount = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            int count = 0;
+
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] == array[i]) {
+                    count++;
+                }
+            }
+
+            if (count > maxCount) {
+                maxCount = count;
+                mode = array[i];
+            }
+        }
+
+        return mode;
+    }
 }
