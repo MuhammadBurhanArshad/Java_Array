@@ -89,8 +89,9 @@ class DynamicArray {
         return result;
     }
     public float getMedian(int[] array) {
-        int[] sortedArray = this.bubbleSort(array);
-    
+        int[] paramArray = array;
+        int[] sortedArray = this.bubbleSort(paramArray);
+        
         if (sortedArray.length % 2 == 0) {
             return (sortedArray[sortedArray.length / 2 - 1] + sortedArray[sortedArray.length / 2]) / 2.0f;
         } else {
@@ -98,16 +99,16 @@ class DynamicArray {
         }
     }
     
-    public int maxSumOfTwo(int[] arr) {
-        if (arr == null || arr.length < 2) {
+    public int maxSumOfTwo(int[] array) {
+        if (array == null || array.length < 2) {
             System.out.println("Array must have at least two elements.");
         }
 
-        int max1 = arr[0];
-        int max2 = arr[1];
+        int max1 = array[0];
+        int max2 = array[1];
 
-        for (int i = 2; i < arr.length; i++) {
-            int current = arr[i];
+        for (int i = 2; i < array.length; i++) {
+            int current = array[i];
             
             if (current > max1) {
                 max2 = max1;
@@ -116,8 +117,18 @@ class DynamicArray {
                 max2 = current;
             }
         }
-
         return max1 + max2;
+    }
+
+    public int[] swapLastTwo(int[] array) {
+        int[] returnableArray = array;
+        if (returnableArray.length >= 2) {
+            returnableArray[returnableArray.length - 1] = returnableArray[returnableArray.length - 1] + returnableArray[returnableArray.length - 2];
+            returnableArray[returnableArray.length - 2] = returnableArray[returnableArray.length - 1] - returnableArray[returnableArray.length - 2];
+            returnableArray[returnableArray.length - 1] = returnableArray[returnableArray.length - 1] - returnableArray[returnableArray.length - 2];
+        }
+
+        return returnableArray;
     }
     
 }

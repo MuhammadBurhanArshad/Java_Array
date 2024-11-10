@@ -12,14 +12,20 @@ public class Main {
 
         int[] duplicatesArray = dynamicArray.getDuplicates(myRegID);
 
+        
         System.out.println("Duplicate Array is: " + dynamicArray.arrayToString(duplicatesArray));
-
-        float medianArray = dynamicArray.getMedian(myRegID);
-
-        System.out.println("Median is: " + medianArray);
-
+         
         int maxSumOfTwo = dynamicArray.maxSumOfTwo(myRegID);
-
+        
         System.out.println("Max sum of two elements is: " + maxSumOfTwo);
+
+        int[] swappedLastTwo = dynamicArray.swapLastTwo(myRegID);
+
+        System.out.println("Array with last two swapped is: " + dynamicArray.arrayToString(swappedLastTwo));
+    
+        float medianArray = dynamicArray.getMedian(myRegID);
+        
+        System.out.println("Median is: " + medianArray);
+       
     }
 }
