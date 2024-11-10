@@ -14,7 +14,11 @@ public class Main {
 
         
         System.out.println("Duplicate Array is: " + dynamicArray.arrayToString(duplicatesArray));
-         
+        
+        float medianArray = dynamicArray.getMedian(myRegID);
+        
+        System.out.println("Median is: " + medianArray);
+
         int maxSumOfTwo = dynamicArray.maxSumOfTwo(myRegID);
         
         System.out.println("Max sum of two elements is: " + maxSumOfTwo);
@@ -23,9 +27,13 @@ public class Main {
 
         System.out.println("Array with last two swapped is: " + dynamicArray.arrayToString(swappedLastTwo));
     
-        float medianArray = dynamicArray.getMedian(myRegID);
+        int[] replacedArray = dynamicArray.replaceWithSquare(myRegID);
         
-        System.out.println("Median is: " + medianArray);
+        System.out.println("Square array is: " + dynamicArray.arrayToString(replacedArray));
+    
+        String isPalindrome = dynamicArray.isPalindrome(myRegID) ? "Palindrome" : "Not Palindrome";
+        
+        System.out.println("The array is " + isPalindrome + ".");
        
     }
 }
